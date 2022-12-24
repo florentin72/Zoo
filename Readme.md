@@ -16,3 +16,5 @@ For further reference, please consider the following sections:
 [![Maintainability](https://api.codeclimate.com/v1/badges/1422dd731d028b298e38/maintainability)](https://codeclimate.com/github/florentin72/Zoo/maintainability)
 
 [![Java CI with Maven](https://github.com/florentin72/Zoo/actions/workflows/maven.yml/badge.svg)](https://github.com/florentin72/Zoo/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/florentin72/Zoo/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/florentin72/Zoo/actions/workflows/maven-publish.yml)
+[![Java CI with Maven](https://github.com/florentin72/Zoo/actions/workflows/ant.yml/badge.svg)](https://github.com/florentin72/Zoo/actions/workflows/ant.yml)
