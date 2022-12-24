@@ -19,3 +19,4 @@ For further reference, please consider the following sections:
 [![Java CI with Maven](https://github.com/florentin72/Zoo/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/florentin72/Zoo/actions/workflows/maven-publish.yml)
 [![Java CI with Maven](https://github.com/florentin72/Zoo/actions/workflows/ant.yml/badge.svg)](https://github.com/florentin72/Zoo/actions/workflows/ant.yml)
 [![Java CI with Maven](https://github.com/florentin72/Zoo/actions/workflows/maven.yml/badge.svg)](https://github.com/florentin72/Zoo/actions/workflows/maven.yml)
+[![Dependency Review](https://github.com/florentin72/Zoo/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/florentin72/Zoo/actions/workflows/dependency-review.yml)
