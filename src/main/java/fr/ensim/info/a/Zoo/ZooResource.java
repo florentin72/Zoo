@@ -1,9 +1,10 @@
 package fr.ensim.info.a.Zoo;
+import fr.ensim.info.a.Zoo.exception.ErrorResponse;
+import fr.ensim.info.a.Zoo.exception.LimitVisiteurException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
 @RestController
 @RequestMapping(path = "/zoo")
 public class ZooResource {
@@ -13,13 +14,20 @@ public class ZooResource {
 
 
 
-    @PostMapping(path = "/visiteur", consumes = "application/json", produces = "application/json")
-    public void addVisiteur()  {
+    @PostMapping(path = "/visiteur", produces = "application/json")
+    public void addVisiteur() throws LimitVisiteurException {
         zooService.addVisiteur();
     }
-    @GetMapping(path = "/visiteur", consumes = "application/json", produces = "application/json")
+    @GetMapping(path = "/visiteur", produces = "application/json")
     public int getNbVisiteur()  {
         return zooService.getNbVisiteur();
+    }
+
+    @ExceptionHandler(LimitVisiteurException.class)
+    public ErrorResponse handleException(LimitVisiteurException ex) {
+        ErrorResponse errorResponse = new ErrorResponse();
+        errorResponse.setMessage(ex.getMessage());
+        return errorResponse;
     }
 
 }
