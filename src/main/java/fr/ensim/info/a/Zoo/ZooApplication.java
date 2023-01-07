@@ -6,7 +6,7 @@ import fr.ensim.info.a.Zoo.model.Zoo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Stack;
 
 @SpringBootApplication
@@ -21,6 +21,10 @@ public class ZooApplication {
 		zoo = new Zoo();
 		zoo.setMaxVisiteurParSecteur(15);
 		Secteur<Tigre> secteurTigre = new Secteur<>();
+		secteurTigre.setAnimalList(new ArrayList<>());
+		for (int i=0; i< 50; i++){
+			secteurTigre.getAnimalList().add(new Tigre());
+		}
 		zoo.setSecteurList(new Stack<>());
 		zoo.getSecteurList().add(secteurTigre);
 	}

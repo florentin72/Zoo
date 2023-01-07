@@ -18,4 +18,7 @@ public abstract class Animal {
         this.nom = nom;
     }
 
+    public TypeAnimal getTypeAnimal() {
+        return typeAnimal;
+    }
 }
