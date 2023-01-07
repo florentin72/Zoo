@@ -1,14 +1,12 @@
 package fr.ensim.info.a.Zoo;
+
 import fr.ensim.info.a.Zoo.exception.ErrorResponse;
 import fr.ensim.info.a.Zoo.exception.LimitVisiteurException;
-import fr.ensim.info.a.Zoo.model.Animal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
 import java.util.Map;
-
+import org.apache.log4j.Logger;
 @RestController
 @RequestMapping(path = "/zoo")
 public class ZooResource {
@@ -16,13 +14,14 @@ public class ZooResource {
     @Autowired
     ZooService zooService;
 
-
+    static Logger LOGGER = Logger.getLogger(ZooResource.class);
     /**
      *
      * @throws LimitVisiteurException
      */
     @PostMapping(path = "/visiteur", produces = "application/json")
     public void addVisiteur() throws LimitVisiteurException {
+        LOGGER.info("Ajout d'un visiteur");
         zooService.addVisiteur();
     }
 
@@ -32,6 +31,7 @@ public class ZooResource {
      */
     @GetMapping(path = "/visiteur", produces = "application/json")
     public int getNbVisiteur()  {
+        LOGGER.info("Recherhe nombre visiteurs");
         return zooService.getNbVisiteur();
     }
 
@@ -53,7 +53,9 @@ public class ZooResource {
      */
     @GetMapping(path = "/animaux", produces = "application/json")
     public Map<String,Integer> getNbAnimaux ( ){
-       return zooService.getAnimaux();
+        LOGGER.info("Recherhe du  nombre d'animaux");
+
+        return zooService.getAnimaux();
 
     }
 
