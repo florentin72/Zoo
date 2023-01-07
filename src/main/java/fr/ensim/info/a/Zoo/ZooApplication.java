@@ -27,26 +27,17 @@ public class ZooApplication {
 		secteurZebre.setAnimalList(new ArrayList<>());
 		for (int i=0; i< 50; i++){
 			secteurTigre.getAnimalList().add(new Tigre());
+			secteurZebre.getAnimalList().add(new Zebre());
+
 		}
 		secteurZebre.getAnimalList().add(new Zebre());
 		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
-		secteurZebre.getAnimalList().add(new Zebre());
+
 		secteurZebre.getAnimalList().add(new Zebre());
 
 		zoo.setSecteurList(new Stack<>());
 		zoo.getSecteurList().add(secteurTigre);
+		zoo.getSecteurList().add(secteurZebre);
 	}
 
 }
